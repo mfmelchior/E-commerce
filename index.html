@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="Geladeira">
+                <img src="geladeira LG 695L.avif" alt="Geladeira">
+                <h3>Geladeira LG 695L</h3>
+                <p>R$ 9.500,00</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="televisão">
+                <img src="televisão 32p  Philco.webp" alt="televisão">
+                <h3>Televisão 32" Philco</h3>
+                <p>R$ 999,00</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="Microondas">
+                <img src="micro mides 30l.png" alt="Microondas">
+                <h3>Microondas Midea 30L</h3>
+                <p>R$ 579,90</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="Relógio">
+                <img src="Apple watch series 7.jpg" alt="Apple watch">
+                <h3>Apple Watch series 7</h3>
+                <p>R$ 3.299,90</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="louca">
+                <img src="Lava Loucas panasonic.jpg" alt="Lava Louças">
+                <h3>Lava Louças Panasonic</h3>
+                <p>R$ 5.399,99</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="roupa">
+                <img src="lava roupas.avif" alt="Máquina Lava Roupas">
+                <h3>Máquina de lavar roupas Consul 15Kg</h3>
+                <p>R$ 1.756,80</p>
+                <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Seu E-commerce</p>
+    </footer>
+    <script>
+        let cartItems = 0;
+
+        function adicionarAoCarrinho(quantity) {
+            cartItems += quantity;
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const cartCounter = document.getElementById('cartCounter');
+            cartCounter.innerText = cartItems.toString();
+        }
+    </script>
+</body>
+
+</html>
